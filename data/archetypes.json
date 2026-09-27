@@ -1,0 +1,92 @@
+[
+    {
+        "id": "Strategy1",
+        "name": "High Volatility Swing Strategy",
+        "concept": "Identifies high volatility days and uses a Swing Divergence with Wilder's RSI to generate buy and sell signals.",
+        "instructions": "Use volatility_ratio() to filter high volatility days. Find_fvgs() to identify FVGs. Apply wilders_rsi() and swing_divergence() for signal generation. Set TARGET_TIMEFRAME to '1h' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy2",
+        "name": "Chandelier Exit Volatility Filter",
+        "concept": "Applies Chandelier Exit with a volatility filter to identify potential reversal points in a trending market.",
+        "instructions": "Use volatility_ratio() to filter high volatility days. Apply chandelier_exit() with a specific ATR multiple. Set TARGET_TIMEFRAME to '1h' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy3",
+        "name": "Structural Swing Breakouts",
+        "concept": "Identifies structural swing breaks in a trending market using Swing Divergence with Wilder's RSI.",
+        "instructions": "Use daily_levels() to identify daily levels. Find_fvgs() to identify FVGs. Apply wilders_rsi() and swing_divergence() for signal generation. Set TARGET_TIMEFRAME to '15m' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy4",
+        "name": "Volume Profile Volatility Filter",
+        "concept": "Applies volume profile levels to filter high volume days and uses RSI to identify potential reversal points.",
+        "instructions": "Use volume_profile_levels() to identify volume profile levels. Use rsi() to filter high RSI values. Set TARGET_TIMEFRAME to '1h' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy5",
+        "name": "Linear Regression Slope Entry Exit",
+        "concept": "Uses linear regression slope to identify trend direction and entry/exit points.",
+        "instructions": "Use linear_regression_slope() to identify trend direction. Use session_mask() to filter session data. Set TARGET_TIMEFRAME to '4h' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy6",
+        "name": "MACD Acceleration with Daily Levels",
+        "concept": "Applies MACD Acceleration and daily levels to generate buy and sell signals.",
+        "instructions": "Use macd_acceleration() and daily_levels() for signal generation. Set TARGET_TIMEFRAME to '1h' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy7",
+        "name": "Supertrend and Volume Profile",
+        "concept": "Combines Supertrend with volume profile levels to identify potential reversal points.",
+        "instructions": "Use supertrend() and volume_profile_levels() for signal generation. Set TARGET_TIMEFRAME to '1h' for higher timeframe analysis."
+    },
+    {
+        "id": "Strategy8",
+        "name": "Stochastic Dynamic Cycle with RSI",
+        "concept": "Applies Stochastic Dynamic Cycle with RSI to identify potential reversal points.",
+        "instructions": "Use stochastic_dynamic_cycle() and rsi() for signal generation. Set TARGET_TIMEFRAME to '1h' for higher timeframe analysis."
+    },
+    {
+        "id": "XAUUSD_15m_Momentum_Swing_Divergence",
+        "name": "Momentum Swing Divergence",
+        "concept": "Identifies swing divergences using the 5-minute timeframe and applies momentum indicators for trend entry and exit.",
+        "instructions": "1. Calculate 15-minute VWAP and 5-minute RSI.\n  2. Identify 5-minute swing divergences.\n  3. If divergence, apply momentum indicators to determine entry and exit conditions.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and momentum direction."
+    },
+    {
+        "id": "XAUUSD_1h_Structural_Trend_Filter",
+        "name": "Structural Trend Filter",
+        "concept": "Applies a structural trend filter using the 1h timeframe to identify long-term trends.",
+        "instructions": "1. Calculate 1h RSI, MACD, and ADX.\n  2. Identify 1h structural trends using RSI and MACD.\n  3. Apply trend filter logic to filter out non-structural trends.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and trend direction."
+    },
+    {
+        "id": "XAUUSD_4h_Directional_Volume_Ratio",
+        "name": "Directional Volume Ratio",
+        "concept": "Identifies directional volume ratios using the 4h timeframe to track market direction and volume flow.",
+        "instructions": "1. Calculate 4h volume profile levels and directional volume index (DVI).\n  2. Identify 4h directional volume ratios.\n  3. Apply directional volume index and volume profile logic to determine entry and exit conditions.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and volume flow direction."
+    },
+    {
+        "id": "XAUUSD_15m_Market_Structure_Order_Flow",
+        "name": "Market Structure and Order Flow",
+        "concept": "Applies market structure and order flow analysis using the 15m timeframe to identify market direction and volume flow.",
+        "instructions": "1. Calculate 15m volume profile levels, order flow imbalance, and session compression.\n  2. Identify market structure and order flow patterns.\n  3. Apply market structure and order flow logic to determine entry and exit conditions.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and market structure/order flow direction."
+    },
+    {
+        "id": "XAUUSD_1h_Momentum_Divergence",
+        "name": "Momentum Divergence",
+        "concept": "Identifies momentum divergence using the 1h timeframe and applies momentum indicators for trend entry and exit.",
+        "instructions": "1. Calculate 1h RSI and MACD.\n  2. Identify 1h momentum divergences.\n  3. Apply momentum indicators to determine entry and exit conditions.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and momentum direction."
+    },
+    {
+        "id": "XAUUSD_4h_Structural_Cycle_Divergence",
+        "name": "Structural Cycle Divergence",
+        "concept": "Applies a structural cycle divergence analysis using the 4h timeframe to identify long-term cycles.",
+        "instructions": "1. Calculate 4h RSI, MACD, and ADX.\n  2. Identify 4h structural cycles using RSI and MACD.\n  3. Apply cycle divergence logic to determine entry and exit conditions.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and cycle direction."
+    },
+    {
+        "id": "XAUUSD_15m_Momentum_RSI_Slope",
+        "name": "Momentum RSI Slope",
+        "concept": "Identifies momentum RSI slopes using the 15m timeframe to track market direction.",
+        "instructions": "1. Calculate 15m RSI and its slope.\n  2. Identify 15m momentum RSI slopes.\n  3. Apply momentum RSI slope logic to determine entry and exit conditions.\n  4. Use session gating to ensure the strategy is executed within a specific session timeframe.\n  5. Set SL/TP based on divergence strength and momentum slope direction."
+    }
+]
